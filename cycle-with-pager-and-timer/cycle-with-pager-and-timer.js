@@ -5,14 +5,14 @@
 // jquery.addresses
 // jquery.easing
 
-APP.features.slides = {
+APP.features.cycle = {
   config: {
     timeout: 7000,
     speed: 750
   },
   
   init: function () {
-    var self = APP.features.slides,
+    var self = APP.features.cycle,
         index = self.getIndex();
     
     // Start the cycle
@@ -30,7 +30,7 @@ APP.features.slides = {
   },
   
   onBefore: function (out, inc, opts) {
-    var self  = APP.features.slides,
+    var self  = APP.features.cycle,
         index = self.getIndex();
         
     index = self.getIndex();
@@ -56,7 +56,7 @@ APP.features.slides = {
   },
   
   onAfter: function (out, inc, opts) {
-    var self = APP.features.slides;
+    var self = APP.features.cycle;
     
     $(inc)
       .find('img').css('left', '0').end()
@@ -66,7 +66,7 @@ APP.features.slides = {
   
   changeSlide: function () {
     $.address.value(this.href);
-    var self  = APP.features.slides,
+    var self  = APP.features.cycle,
         index = self.getIndex();
     
     self.$cycle.cycle(index);
