@@ -1,0 +1,11 @@
+.select-box { position:relative;
+  .faux-select { background:$dk-grey; position:relative; z-index:100;
+    .value { padding-left:1em; }
+    ul.options { background:$grey; color:white; display:none; list-style:none; margin:0; padding:0; position:relative; width:100%; z-index:100;
+      li { border-bottom:1px solid $dk-grey; line-height:1.3em; padding:.6em 1em;
+        &:hover, &:focus, &:active { background:$dk-grey; }
+      }
+    }
+  }
+  #search_bia { display:none; position:absolute; top:2px; right:2px; z-index:0; }
+}

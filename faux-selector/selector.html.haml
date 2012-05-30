@@ -1,0 +1,18 @@
+.select-box
+  .faux-select
+    .value.field Filter by BIA
+    .click= image_tag("arrow.png")
+    .spacer
+    %ul.options
+      %li.option{:data => "1", :id => "1"} Option 1
+      %li.option{:data => "2", :id => "2"} Option 2
+      %li.option{:data => "3", :id => "3"} Option 3
+      %li.option{:data => "4", :id => "4"} Option 4
+      %li.option{:data => "5", :id => "5"} Option 5
+
+  %select{:id => "search", :name => "search"}
+    %option{:value => "1"} Option 1
+    %option{:value => "2"} Option 2
+    %option{:value => "3"} Option 3
+    %option{:value => "4"} Option 4
+    %option{:value => "5"} Option 5
