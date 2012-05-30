@@ -1,0 +1,9 @@
+#photos {
+  min-height:400px;
+  overflow:hidden;
+  width:660px;
+}
+
+#photos img {
+  display:block;
+}
