@@ -1,4 +1,4 @@
-// As seen on
+// As seen on: http://thevillagetnd.com/models/13
 //
 // Dependancies
 // jquery.cycle => http://jquery.malsup.com/cycle/
