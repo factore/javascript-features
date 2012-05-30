@@ -1,4 +1,6 @@
-// ass seen here: http://habiamobile-com.factorepreview.ca/
+// as seen here: http://habiamobile-com.factorepreview.ca/
+// credit goes to marc kelsey (whiny-nil) for this one
+
 
 APP.features.selector = {
   init: function (options) {
