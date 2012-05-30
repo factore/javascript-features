@@ -1,0 +1,26 @@
+.gallery.wrap#display
+  #image
+    #inside
+      / this is where the photos are displayed/zoomed
+      = image_tag(@first_photo.photo.url(:medium), :alt => @first_photo.title, :id => "photo-#{@first_photo.id}")
+
+  .spacer{:style => "height:10px;"}
+
+  #title= @first_photo.title
+
+  / navigation
+  = link_to "View Gallery", gallery_path, :class => "button gallery"
+  = link_to "", "#", :id => "next", :class => "arrow button", "data-new" => @first_photo.next.id
+  = link_to "", "#", :id => "previous", :class => "arrow button", "data-new" => @first_photo.previous.id
+
+.spacer{:style => "height:10px;"}
+
+.gallery.wrap#thumbs{:style => params[:controller] == "index" ? "display:none" : ""}
+  / the gallery collection. it is important that these photos are not huge
+  / because they all need to be loaded for this to work.
+  - if @gallery.blank?
+    %h1 There are currently no photos in this gallery
+  - else
+    - @gallery.each do |photo|
+      = link_to image_tag(photo.photo.url(:small)), photo.photo.url(:medium), :alt => photo.title, :id => "thumb-#{photo.id}", "data-next" => photo.next.id, "data-prev" => photo.previous.id, :class => photo.list_order == 0 ? "active" : ""
+

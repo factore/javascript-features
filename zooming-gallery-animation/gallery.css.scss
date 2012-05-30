@@ -1,0 +1,35 @@
+// this stylesheet is specific to http://lauratedesco.com
+
+// gallery
+.gallery {
+  &#display {
+    #image { height:450px; overflow:hidden; width:940px;
+      #inside { height:1000px; position:relative; left:-530px; text-align:center; width:2000px;
+        img { display:block; margin:0 auto; padding:0; position:relative; }
+        br { height:0px; }
+      }
+    }
+    #title { float:left; text-align:left; }
+  }
+  &#thumbs { padding:10px 0 10px;
+    a { display:inline-block; height:62px; margin:10px; padding:0; width:62px;
+      &:hover { @include boxShadow(0px, 0px, 8px, $lt_grey); }
+      img { border:1px solid #e0e0e0; }
+      &.active img { border:1px solid $pink; }
+    }
+  }
+}
+
+// buttons
+.button { border:1px solid $lt_grey; color:$grey; display:block; float:right; @include rounded(4px);
+  &:hover { background-color:$pink; border:1px solid $dk_pink; color:white; text-decoration:none; }
+  &.gallery { margin-left:10px; padding:0 10px; }
+  &.arrow {
+    &#previous { background:image-url("arrows-prev.png") 0px 0px no-repeat white; height:20px; width:30px;
+      &:hover { background-color:$pink; background-position:0px -20px; }
+    }
+    &#next { @extend #previous; background-image:image-url("arrows-next.png"); margin-left:10px;
+      &:hover { background-color:$pink; background-position:0px -20px;  }
+    }
+  }
+}
