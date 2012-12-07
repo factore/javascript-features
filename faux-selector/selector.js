@@ -6,7 +6,8 @@ APP.features.selector = {
   init: function (options) {
     $fauxSelect = $('.faux-select');
     $select = $('.select-box select');
-
+    $fauxSelect.find(".value").html($select.find("option:selected").html()); 
+    
     $fauxSelect.on('click', '.click', function () {
       $fauxSelect.find('ul.options').slideToggle(100);
     });
